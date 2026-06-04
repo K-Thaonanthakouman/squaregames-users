@@ -18,7 +18,11 @@ public class UserController {
 
     @PostMapping("/users")
     public UserEntity createUser(@RequestBody Map<String, String> body) {
-        return userService.createUser(body.get("username"), body.get("email"));
+        return userService.createUser(
+                body.get("username"),
+                body.get("email"),
+                body.get("password")
+        );
     }
 
     @GetMapping("/users/{id}")

@@ -11,4 +11,5 @@ public class UserEntity {
     public String id;
     public String username;
     public String email;
+    public String password;
 }
